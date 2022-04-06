@@ -44,7 +44,10 @@ server.get("/states", function(request,response){
         if(error) throw new error;
         data = JSON.parse(result);
         console.log(data);
-        response.send(data)
+        response.send({
+            message:" These are the states in Nigeria",
+            data:data
+        })
     })
    
 
